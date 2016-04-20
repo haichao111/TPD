@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace WebUI.Models
@@ -79,6 +80,10 @@ namespace WebUI.Models
         [Display(Name = "确认密码")]
         [Compare("Password", ErrorMessage = "密码和确认密码不匹配。")]
         public string ConfirmPassword { get; set; }
+
+        [Display(Name = "生日")]
+        public DateTime BirthDate { get; set; }
+
     }
 
     public class ResetPasswordViewModel
