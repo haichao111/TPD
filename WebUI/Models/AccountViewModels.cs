@@ -50,6 +50,10 @@ namespace WebUI.Models
     public class LoginViewModel
     {
         [Required]
+        [Display(Name = "用户名")]
+        [StringLength(100, ErrorMessage = "{0} 必须至少包含 {2} 个字符。", MinimumLength = 3)]
+        public string UserName { get; set; }
+
         [Display(Name = "电子邮件")]
         [EmailAddress]
         public string Email { get; set; }
@@ -66,6 +70,11 @@ namespace WebUI.Models
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name = "用户名")]
+        [StringLength(100, ErrorMessage = "{0} 必须至少包含 {2} 个字符。", MinimumLength = 3)]
+        public string UserName { get; set; }
+
+        
         [EmailAddress]
         [Display(Name = "电子邮件")]
         public string Email { get; set; }
@@ -89,6 +98,10 @@ namespace WebUI.Models
     public class ResetPasswordViewModel
     {
         [Required]
+        [Display(Name = "用户名")]
+        [StringLength(100, ErrorMessage = "{0} 必须至少包含 {2} 个字符。", MinimumLength = 3)]
+        public string UserName { get; set; }
+
         [EmailAddress]
         [Display(Name = "电子邮件")]
         public string Email { get; set; }
